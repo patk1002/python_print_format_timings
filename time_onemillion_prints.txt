@@ -1,0 +1,4 @@
+Beginning of main program...
+perc_format: 0.1403562890000103
+str_format: 0.18057585299993661
+f_string: 0.08385744699990028
