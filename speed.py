@@ -33,24 +33,28 @@ def template():
 def main() -> None:
     print(
         "perc_format:",
-        time.timeit(
+        timeit.timeit(
             perc_format,
-            number=100000,
+            number=1000000,
         )
     )
 
     print(
         "str_format:",
-        time.timeit(
+        timeit.timeit(
             str_format,
-            number=100000,
+            number=1000000,
         )
     )
 
     print(
         "f_string:",
-        time.timeit(
+        timeit.timeit(
             f_string,
-            number=100000,
+            number=1000000,
         )
     )
+
+if __name__ == "__main__":
+    print("Beginning of main program...")
+    main()
