@@ -30,7 +30,7 @@ def template():
     country = "Texas"
     _ = TEMPLATE.substitute(name=name, country=country)
 
-def main() -> None;
+def main() -> None:
     print(
         "perc_format:",
         time.timeit(
