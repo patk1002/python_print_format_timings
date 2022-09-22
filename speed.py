@@ -1,6 +1,6 @@
 #! /usr/bin/env python
 """
-Timings for 3 types of Python print format statements
+Timings for 4 types of Python print format statements
 Code from F-strings In Python: Everything You Need To Know 
   at https://youtu.be/Mfmr_Puhtew 
 """
@@ -22,6 +22,11 @@ def f_string():
     name = "Pat Kelly"
     country = "Texas"
     _ = f"{name} is from {country}."
+
+def no_vars():
+    name = "Pat Kelly"
+    country = "Texas"
+    _ = "Pat Kelly is from Texas."
 
 TEMPLATE = Template("$name is from $country.")
 
@@ -51,6 +56,14 @@ def main() -> None:
         "f_string:",
         timeit.timeit(
             f_string,
+            number=1000000,
+        )
+    )
+
+    print(
+        "no_vars:",
+        timeit.timeit(
+            no_vars,
             number=1000000,
         )
     )
