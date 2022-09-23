@@ -8,15 +8,15 @@ Some code from F-strings In Python: Everything You Need To Know
 import timeit
 from string import Template
 
-def perc_format():
-    name = "Pat Kelly"
-    country = "Texas"
-    _ = "%s is from %s." % (name, country)
-
 def str_format():
     name = "Pat Kelly"
     country = "Texas"
     _ = "{} is from {}.".format(name, country)
+
+def perc_format():
+    name = "Pat Kelly"
+    country = "Texas"
+    _ = "%s is from %s." % (name, country)
 
 def f_string():
     name = "Pat Kelly"
@@ -40,17 +40,17 @@ def template():
 
 def main() -> None:
     print(
-        "perc_format:",
+        "str_format:",
         timeit.timeit(
-            perc_format,
+            str_format,
             number=1000000,
         )
     )
 
     print(
-        "str_format:",
+        "perc_format:",
         timeit.timeit(
-            str_format,
+            perc_format,
             number=1000000,
         )
     )
